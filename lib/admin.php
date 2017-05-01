@@ -1,10 +1,14 @@
 <?php
 
 class smartphoto_options {
-  public static function render() {
-
+	function __construct() {
+		add_action('admin_menu', array($this, 'render'));
+	}
+  function render() {
+		?>
+			<div>hoge</div>
+		<?php
   }
 }
 
-
-add_action('admin_menu', array('smartphoto_options', 'render'));
+new smartphoto_options

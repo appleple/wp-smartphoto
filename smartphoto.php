@@ -12,9 +12,8 @@ Author URI: http://www.example.com
 function add_assets() {
 	wp_register_script('SmartPhoto', 'https://unpkg.com/smartphoto@latest/js/smartphoto.min.js');
 	wp_register_style('SmartPhoto', 'https://unpkg.com/smartphoto@latest/css/smartphoto.min.css');
-	wp_enqueue_script();
-	wp_enqueue_style();
+	wp_enqueue_script('SmartPhoto');
+	wp_enqueue_style('SmartPhoto');
 }
-
 
 include_once('lib/admin.php');
