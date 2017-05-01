@@ -5,7 +5,7 @@ class smartphoto_admin {
 		add_action('admin_menu', array($this, 'add_pages'));
 	}
   function add_pages() {
-		add_menu_page('SmartPhoto','SmartPhoto', 'level_8', __FILE__, array($this,'show_text_option_page'), '', 26);
+		add_theme_page('SmartPhoto','SmartPhoto', 'level_8', __FILE__, array($this,'show_page'), '', 26);
   }
 	function get_options() {
 		$options = get_option('smartphoto_options');
@@ -23,7 +23,7 @@ class smartphoto_admin {
 		}
 		return $options;
 	}
-	function show_text_option_page() {
+	function show_page() {
 		if (isset($_POST['smartphoto_options'])){
 			$post = $_POST['smartphoto_options'];
 			update_option('smartphoto_options', $post);
