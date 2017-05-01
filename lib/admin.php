@@ -1,6 +1,6 @@
 <?php
 
-class smartphoto_options {
+class smartphoto_admin {
 	function __construct() {
 		add_action('admin_menu', array($this, 'add_pages'));
 	}
@@ -91,4 +91,4 @@ class smartphoto_options {
 	}
 }
 
-$options = new smartphoto_options;
+new smartphoto_admin;
