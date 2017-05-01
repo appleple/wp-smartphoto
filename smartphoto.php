@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: SmartPhoto
-Plugin URI: http://www.example.com/plugin
-Description: テキストを表示するだけのプラグイン
+Plugin URI: https://github.com/appleple/wp-smartphoto
+Description: The most easy to use responsive image viwer especially for mobile devices
 Author: appleple
-Version: 0.1
+Version: 0.1.0
 License: MIT
-Author URI: http://www.example.com
+Author URI: https://appleple.github.io/
 */
 
 function add_assets() {
