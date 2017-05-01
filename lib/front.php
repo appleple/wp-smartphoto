@@ -11,7 +11,7 @@ class smartphoto_front {
 		wp_enqueue_style('smartphoto-css','https://unpkg.com/smartphoto@latest/css/smartphoto.min.css');
 	}
 	function change_content($content) {
-		$pattern = '/<img.*src="(.*?)"(.*?)>/';
+		$pattern = '/<img.*?src="(.*?)"(.*?)>/';
 		$replacement = '<a href="${1}" class="js-smartPhoto"><img src="${1}"${2}/></a>';
 		return preg_replace($pattern, $replacement, $content);
 	}
@@ -21,6 +21,9 @@ class smartphoto_front {
 		<style>
 		.smartphoto-img {
 			max-width: none;
+		}
+		.smartphoto-nav li {
+			background-color: #FFF;
 		}
 		</style>
 		<script>
