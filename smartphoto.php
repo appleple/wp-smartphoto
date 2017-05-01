@@ -10,5 +10,4 @@ Author URI: https://appleple.github.io/
 */
 
 include_once('lib/admin.php');
-
 include_once('lib/front.php');
