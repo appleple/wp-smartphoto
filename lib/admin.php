@@ -1,15 +1,19 @@
 <?php
 
 class smartphoto_admin {
-
 	function __construct() {
 		add_action('admin_menu', array($this, 'add_pages'));
-  }
-  
+	}
 	function add_pages() {
 		add_theme_page('SmartPhoto', 'SmartPhoto', 'edit_theme_options', 'SmartPhoto', array($this,'show_page'));
-  }
-  
+	}
+	function add_assets() {
+		$custom_css = '#wpcontent {padding-left: 0;}.grid > * {box-sizing:border-box;}';
+		wp_enqueue_style('uny-css', plugins_url('assets/uny.min.css', __FILE__));
+		wp_register_style('smartphoto-admin-style', false );
+		wp_add_inline_style('smartphoto-admin-style', $custom_css );
+		wp_enqueue_style('smartphoto-admin-style');
+	}
 	function get_options() {
 		$options = get_option('smartphoto_options');
 		if (!is_array($options)) {
@@ -27,6 +31,9 @@ class smartphoto_admin {
 		return $options;
 	}
 	function show_page() {
+		add_action('admin_enqueue_scripts', array($this, 'add_assets'));
+
+		$this->add_assets();
 		if (isset($_POST['smartphoto_options'])){
 			$post = $_POST['smartphoto_options'];
 			update_option('smartphoto_options', $post);
@@ -102,12 +109,6 @@ class smartphoto_admin {
 				</div>
 				</div>	
 			</form>
-			<link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css">
-			<style>
-				#wpcontent {
-					padding-left: 0;
-				}
-			</style>
 		<?php
 	}
 }
