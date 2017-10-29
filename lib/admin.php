@@ -95,11 +95,11 @@ class Smartphoto_Admin {
 							<th>useOrientationApi</th>
 							<td>
 								<label class="input is-radio">
-									<input type="radio" name="smartphoto_options[useOrientationApi]" value="true" <?php checked( $opt['useOrientationApi'], 'true' ); ?>/>
+									<input type="radio" name="smartphoto_options[useOrientationApi]" value="true" <?php checked( $opt['useOrientationApi'], true ); ?>/>
 									<span>true</span>
 								</label>
 								<label class="input is-radio">
-									<input type="radio" name="smartphoto_options[useOrientationApi]" value="false" <?php checked( $opt['useOrientationApi'], 'false' ); ?>/>
+									<input type="radio" name="smartphoto_options[useOrientationApi]" value="false" <?php checked( $opt['useOrientationApi'], false ); ?>/>
 									<span>false</span>
 								</label>
 							</td>
@@ -108,11 +108,11 @@ class Smartphoto_Admin {
 							<th>verticalGravity</th>
 							<td>
 								<label class="input is-radio">
-									<input type="radio" name="smartphoto_options[verticalGravity]" value="true" <?php checked( $opt['verticalGravity'], 'true' ); ?>/>
+									<input type="radio" name="smartphoto_options[verticalGravity]" value="true" <?php checked( $opt['verticalGravity'], true ); ?>/>
 									<span>true</span>
 								</label>
 								<label class="input is-radio">
-									<input type="radio" name="smartphoto_options[verticalGravity]" value="false" <?php checked( $opt['verticalGravity'], 'false' ); ?>/>
+									<input type="radio" name="smartphoto_options[verticalGravity]" value="false" <?php checked( $opt['verticalGravity'], false ); ?>/>
 									<span>false</span>
 								</label>
 							</td>
