@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 Plugin Name: SmartPhoto
 Plugin URI: https://github.com/appleple/wp-smartphoto
 Description: The most easy to use responsive image viwer especially for mobile devices
@@ -9,5 +9,9 @@ License: GPL2
 Author URI: https://appleple.github.io/
 */
 
-include_once('lib/admin.php');
-include_once('lib/front.php');
+require 'lib/admin.php';
+require 'lib/front.php';
+
+
+new Smartphoto_Admin();
+new Smartphoto_Front();
